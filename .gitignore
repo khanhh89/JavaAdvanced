@@ -4,13 +4,19 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 .kotlin
+.idea
 
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
+.gradle/wrapper
+.gitignore
+settings.gradle.kts
+gradlew
 .idea/libraries/
+build.gradle.kts
 *.iws
 *.iml
 *.ipr
