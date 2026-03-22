@@ -37,8 +37,7 @@ public class DoctorDao {
         String sql = "INSERT INTO Doctors (id, name, specialty) VALUES (?, ?, ?)";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            
-            // Sử dụng PreparedStatement để chống SQL Injection và truyền dữ liệu an toàn
+
             pstmt.setString(1, doctor.getId());
             pstmt.setString(2, doctor.getName());
             pstmt.setString(3, doctor.getSpecialty());

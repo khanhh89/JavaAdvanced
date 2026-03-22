@@ -33,7 +33,6 @@ public class Main {
                 conn = DriverManager.getConnection(DB_URL + DB_NAME, DB_USER, DB_PASSWORD);
                 stmt = (PreparedStatement) conn.createStatement();
 
-                // Tạo bảng Medicines nếu chưa có
                 String createTable = "CREATE TABLE IF NOT EXISTS Medicines (" +
                         "id INT AUTO_INCREMENT PRIMARY KEY," +
                         "name VARCHAR(100) NOT NULL," +
@@ -41,7 +40,6 @@ public class Main {
                 stmt.executeUpdate(createTable);
                 System.out.println("Bảng Medicines đã sẵn sàng!");
 
-                // Chèn dữ liệu mẫu
                 stmt.executeUpdate("INSERT INTO Medicines (name, quantity) VALUES ('Paracetamol', 100)");
                 stmt.executeUpdate("INSERT INTO Medicines (name, quantity) VALUES ('Amoxicillin', 50)");
                 stmt.executeUpdate("INSERT INTO Medicines (name, quantity) VALUES ('Vitamin C', 200)");
